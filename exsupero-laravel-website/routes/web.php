@@ -12,9 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('master');
 });
 
+Route::get('what-we-do', 'WhatWeDoController@whatwedo');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
